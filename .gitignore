@@ -1,0 +1,15 @@
+node_modules
+site
+.DS_Store
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+dist
+.env*
+.parcel-cache
+android
+ios

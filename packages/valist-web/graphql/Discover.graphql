@@ -1,0 +1,21 @@
+query Apps($order: String, $filterAddresses: [String]) {
+  releases(first: 1000, orderBy: blockTime, orderDirection: $order,
+    where: {
+      sender_not_in: $filterAddresses
+    }) {
+      id
+      name
+      metaURI
+      project {
+        id
+        name
+        metaURI
+        account {
+          name
+          metaURI
+        }
+        blockTime
+      }
+      blockTime
+    },
+}

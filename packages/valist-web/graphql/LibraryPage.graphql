@@ -1,0 +1,14 @@
+query LibraryPage($address: String!) {
+  purchases(where: {recipient: $address}) {
+    product {
+      project {
+        id
+        name
+        metaURI
+        account {
+          name
+        }
+      }
+    }  
+  }
+}
